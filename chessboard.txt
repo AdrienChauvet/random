@@ -1,0 +1,29 @@
+9	10	11
+8	9	10
+7	8	9
+
+4,5	5,5	6,5
+4,4	5,4	6,4
+4,3	5,3	6,3
+
+bishop :
+
+a = int(input())
+b = int(input())
+c = int(input())
+d = int(input())
+
+e = 0
+
+#Si même ligne ou même colonne
+if a == c or b == d:
+    e = 1
+
+#Si diagonales
+if abs(a + b) == abs(c + d) or (abs(a + b) + abs(c + d)) % 2 == 0:
+    e = 0
+    
+if e == 1:
+    print("NO")
+else:
+    print("YES")
